@@ -8,7 +8,7 @@ export const Navbar = () => {
 
   return (
     <nav>
-        <div className=' flex px-6 py-5 justify-between text-white w-full bg-blue-900 md:bg-transparent'>
+        <div className=' flex px-6 py-5 justify-between text-white w-full bg-blue-950 md:bg-transparent'>
              <h1 className='text-sm md:text-4xl italic'>Melula.</h1>
              <div className='hidden md:flex gap-8 text-xs md:text-lg font-bold justify-between '>
                 <a href= '#' id='shop' class="hover-effect cursor-pointer">SHOP</a>
@@ -31,8 +31,10 @@ export const Navbar = () => {
                             <FaTimes size={32} />
                         </button>
                     </div>
-                    <a href='#'>SHOP</a>
-                    <a href='#'>ABOUT</a>
+                    <div className='flex gap-4 flex-col font-bold'> 
+                        <a href='#'>SHOP</a>
+                        <a href='#'>ABOUT</a>
+                    </div>
                 </div>
             )}
         
