@@ -100,7 +100,7 @@ export const Background = () => {
       <div className='grid cols-1 md:grid-cols-2'>
         <div className=''>
           <div className='flex justify-center mb-5 flex-col px-8 md:pl-36'>
-            <h className= 'text-blue-950 text-2xl mb-10'>Follow us on Instagram <a href='#' className='underline hover:text-blue-400 '>@melula_copenhagen</a></h>
+            <h className= 'text-blue-950 text-2xl md:text-4xl mb-10'>Follow us on Instagram <a href='#' className='underline hover:text-blue-400 '>@melula_copenhagen</a></h>
             <div className='flex gap-4'>
             <img src={laces1} className='w-1/2 h-1/2'/>
             <img src={laces2} className='w-1/2 h-1/2'/>
@@ -108,23 +108,23 @@ export const Background = () => {
           </div>
         </div>
         <div className='md:justify-center'>
-            <h1 className='flex justify-center py-2 font-semibold'>Subscribe</h1>
-            <p className='px-2 md:flex justify-center mb-8 py-2'>Sign up with your email address to receive news and updates.</p>
-            <form action="" className='px-2 md:flex justify-center py-2'>
-              <input type="text" placeholder='E-mailaddress' className='border border-gray-300 py-3 px-4 mr-2'/>
-              <button className='bg-green-300 py-3 px-8 border border-gray-300'>SIGN UP</button>
+            <h1 className='flex justify-center py-2 text-4xl md:text-2xl mt-10'>Subscribe</h1>
+            <p className='px-2 flex justify-center x mb-8 py-2'>Sign up with your email address to receive news and updates.</p>
+            <form className='px-2 flex justify-center py-2'>
+              <input type="text" placeholder='E-mailaddress' className='border border-gray-300 py-2 px-4 mr-2'/>
+              <button className='bg-teal-300 py-3 px-8 border border-gray-300 rounded-md text-white hover:bg-teal-200'>SIGN UP</button>
             </form>
-            <p className='flex justify-center pt-6 text-gray-400 mb-24'>We respect your privacy.</p>
+            <p className='flex justify-center text-xs pt-6 text-gray-600 mb-24'>We respect your privacy.</p>
         </div>
        
       </div>
       
       {/* footer */}
-      <div className='bg-blue-950 py-20 mt-32'>
+      <div className='bg-blue-950 py-8 md:py-20 mt-32'>
         <div className='flex justify-center'>
-          <h1 className='text-green-600'>Melula</h1>
-          <p className='text-white ml-5'>11 Dannevirkegade, København, 1763, Denmark</p>
-          <h1 className='hover:text-gray-500 text-white ml-2'>hello@melula.com</h1>
+          <h1 className='text-green-300 font-semibold md:text-green-600'>Melula</h1>
+          <p className='text-white ml-2'>11 Dannevirkegade, København, 1763, Denmark</p>
+          <h1 className='hover:text-gray-500 text-white ml-3'>hello@melula.com</h1>
         </div>
         <div className='flex justify-center py-6 gap-4 text-white hover:text-gray-500'>
           <FaInstagram size={28} className='cursor-pointer hover:text-white'/> 

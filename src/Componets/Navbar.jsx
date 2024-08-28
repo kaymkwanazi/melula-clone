@@ -1,18 +1,21 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IoCartOutline } from "react-icons/io5";
+import logo from '../assets/Images/logo.png'
 
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [changeHover, setHover] = useState(false);
 
   return (
     <nav>
-        <div className=' flex px-6 py-5 justify-between text-white w-full bg-blue-950 md:bg-transparent'>
-             <h1 className='text-sm md:text-4xl italic'>Melula.</h1>
-             <div className='hidden md:flex gap-8 text-xs md:text-lg font-bold justify-between '>
-                <a href= '#' id='shop' class="hover-effect cursor-pointer">SHOP</a>
-                <a href= '#' id='about' class="hover-effect cursor-pointer">ABOUT</a>
+        <div className=' flex px-5 py-6 md:px-32 md:py-16 justify-between text-white w-full bg-blue-950 md:bg-transparent'>
+             {/* <h1 className='text-sm md:text-4xl italic'>Melula.</h1> */}
+             <img src={logo} className='w-20' />
+             <div className='hidden md:flex gap-8 text-xs md:text-lg font-bold justify-between group '>
+                <a href= '#' className='group-hover:opacity-40 transition-opacity duration-300 hover:opacity-100'>SHOP</a>
+                <a href= '#'  className='group-hover:opacity-40 transition-opacity duration-300 hover:opacity-100'>ABOUT</a>
              </div>
              <div className='relative'>
                 <IoCartOutline size={32}/>
@@ -31,8 +34,8 @@ export const Navbar = () => {
                             <FaTimes size={32} />
                         </button>
                     </div>
-                    <div className='flex gap-4 flex-col font-bold'> 
-                        <a href='#'>SHOP</a>
+                    <div className='flex gap-4 flex-col font-bold md:flex:group '> 
+                        <a href='#' >SHOP</a>
                         <a href='#'>ABOUT</a>
                     </div>
                 </div>
