@@ -27,7 +27,7 @@ export const Background = () => {
             <Navbar />
             <div className='container mx-auto px-4 lg:-mt-64 py-52 '>
                 <div className='flex flex-col py-2 items-center'>
-                    <h1 className='md:text-6xl text-4xl font-semibold md:pt-96 text-white'>FOR COLOURFUL </h1>
+                    <h1 className='md:text-6xl text-4xl font-semibold md:pt-64 text-white'>FOR COLOURFUL </h1>
                     <h1 className='md:text-6xl text-4xl mt-2 mb-10 font-semibold text-white'>STEPS IN LIFE</h1>
                     <div className='py-20 md:py-5'>
                         <button className='bg-emerald-400 rounded-full px-10 py-4 text-white font-semibold text-lg hover:bg-gradient-to-l from-emerald-400 hover:bg-transparent'>VISIT OUR SHOP</button>
@@ -100,7 +100,7 @@ export const Background = () => {
       <div className='grid cols-1 md:grid-cols-2'>
         <div className=''>
           <div className='flex justify-center mb-5 flex-col px-8 md:pl-36'>
-            <h className= 'text-blue-950 text-2xl md:text-4xl mb-10'>Follow us on Instagram <a href='#' className='underline hover:text-blue-400 '>@melula_copenhagen</a></h>
+            <h1 className= 'text-blue-950 text-2xl md:text-4xl mb-10'>Follow us on Instagram <a href='#' className='underline hover:text-blue-400 '>@melula_copenhagen</a></h1>
             <div className='flex gap-4'>
             <img src={laces1} className='w-1/2 h-1/2'/>
             <img src={laces2} className='w-1/2 h-1/2'/>

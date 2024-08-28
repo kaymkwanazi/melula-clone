@@ -6,16 +6,28 @@ import logo from '../assets/Images/logo.png'
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [changeHover, setHover] = useState(false);
+    const [hoveredText, setHoveredText] = useState(null); 
+
 
   return (
     <nav>
-        <div className=' flex px-5 py-6 md:px-32 md:py-16 justify-between text-white w-full bg-blue-950 md:bg-transparent'>
-             {/* <h1 className='text-sm md:text-4xl italic'>Melula.</h1> */}
+        <div className=' flex px-5 py-6 justify-between text-white w-full bg-blue-950 md:bg-transparent'>
              <img src={logo} className='w-20' />
              <div className='hidden md:flex gap-8 text-xs md:text-lg font-bold justify-between group '>
-                <a href= '#' className='group-hover:opacity-40 transition-opacity duration-300 hover:opacity-100'>SHOP</a>
-                <a href= '#'  className='group-hover:opacity-40 transition-opacity duration-300 hover:opacity-100'>ABOUT</a>
+                <a href= '#'
+                    className={`cursor-pointer ${
+                        hoveredText === 'About' ? 'text-gray-200' : 'text-white'
+                      }`}
+                    onMouseEnter={() => setHoveredText('Shop')}
+                    onMouseLeave={() => setHoveredText(null)}
+                >SHOP</a>
+                <a href= '#'
+                    className={`cursor-pointer ${
+                        hoveredText === 'Shop' ? 'text-gray-200' : 'text-white'
+                      }`}
+                    onMouseEnter={() => setHoveredText('About')}
+                    onMouseLeave={() => setHoveredText(null)}
+                >ABOUT</a>
              </div>
              <div className='relative'>
                 <IoCartOutline size={32}/>
