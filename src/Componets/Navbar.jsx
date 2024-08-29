@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { IoCartOutline } from "react-icons/io5";
 import logo from '../assets/Images/logo.png'
 
-
+import { Link } from 'react-router-dom'
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [hoveredText, setHoveredText] = useState(null); 
@@ -12,22 +12,25 @@ export const Navbar = () => {
   return (
     <nav>
         <div className=' flex px-5 py-6 justify-between text-white w-full bg-blue-950 md:bg-transparent'>
-             <img src={logo} className='w-20' />
+            <Link to='/'>
+            <img src={logo} className='w-20' />
+            </Link>
+             
              <div className='hidden md:flex gap-8 text-xs md:text-lg font-bold justify-between group '>
-                <a href= '#'
+                <Link to= '/Shop'
                     className={`cursor-pointer ${
                         hoveredText === 'About' ? 'text-gray-200' : 'text-white'
                       }`}
                     onMouseEnter={() => setHoveredText('Shop')}
                     onMouseLeave={() => setHoveredText(null)}
-                >SHOP</a>
-                <a href= '#'
+                >SHOP</Link>
+                <Link to='/About'
                     className={`cursor-pointer ${
                         hoveredText === 'Shop' ? 'text-gray-200' : 'text-white'
                       }`}
                     onMouseEnter={() => setHoveredText('About')}
                     onMouseLeave={() => setHoveredText(null)}
-                >ABOUT</a>
+                >ABOUT</Link>
              </div>
              <div className='relative'>
                 <IoCartOutline size={32}/>

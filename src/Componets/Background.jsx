@@ -14,23 +14,28 @@ import pic17 from '../assets/Images/gif.gif'
 import logo from '../assets/Images/v.logo.png'
 import laces1 from '../assets/Images/laces-1.jpeg'
 import laces2 from '../assets/Images/laces2.jpeg'
-
-import { Navbar } from './Navbar'
+import { Navigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { FaFacebook, FaInstagram, FaPinterest } from 'react-icons/fa'
+import { Navbar } from './Navbar'
 
 export const Background = () => {
+    
+          
   return (
     <>
         <div className='relative h-screen bg-cover bg-center'
             style={{backgroundImage: `url(${backgroundPic})`}}>
-            <Navbar />
+                   <Navbar/>
             <div className='container mx-auto px-4 lg:-mt-64 py-52 '>
                 <div className='flex flex-col py-2 items-center'>
                     <h1 className='md:text-6xl text-4xl font-semibold md:pt-64 text-white'>FOR COLOURFUL </h1>
                     <h1 className='md:text-6xl text-4xl mt-2 mb-10 font-semibold text-white'>STEPS IN LIFE</h1>
                     <div className='py-20 md:py-5'>
-                        <button className='bg-emerald-400 rounded-full px-10 py-4 text-white font-semibold text-lg hover:bg-gradient-to-l from-emerald-400 hover:bg-transparent'>VISIT OUR SHOP</button>
+                      <Link to='/Shop' >
+                      <button className='bg-emerald-400 rounded-full px-10 py-4 text-white font-semibold text-lg hover:bg-gradient-to-l from-emerald-400 hover:bg-transparent'>VISIT OUR SHOP</button>
+                      </Link>
+                       
                     </div>
                 </div>
             </div>
@@ -100,7 +105,7 @@ export const Background = () => {
       <div className='grid cols-1 md:grid-cols-2'>
         <div className=''>
           <div className='flex justify-center mb-5 flex-col px-8 md:pl-36'>
-            <h1 className= 'text-blue-950 text-2xl md:text-4xl mb-10'>Follow us on Instagram <a href='#' className='underline hover:text-blue-400 '>@melula_copenhagen</a></h1>
+            <h1 className= 'text-blue-950 text-2xl md:text-2xl mb-10'>Follow us on Instagram <a href='#' className='underline hover:text-blue-400 '>@melula_copenhagen</a></h1>
             <div className='flex gap-4'>
             <img src={laces1} className='w-1/2 h-1/2'/>
             <img src={laces2} className='w-1/2 h-1/2'/>
@@ -119,24 +124,7 @@ export const Background = () => {
        
       </div>
       
-      {/* footer */}
-      <div className='bg-blue-950 py-8 md:py-20 mt-32'>
-        <div className='flex justify-center'>
-          <h1 className='text-green-300 font-semibold md:text-green-600'>Melula</h1>
-          <p className='text-white ml-2'>11 Dannevirkegade, København, 1763, Denmark</p>
-          <h1 className='hover:text-gray-500 text-white ml-3'>hello@melula.com</h1>
-        </div>
-        <div className='flex justify-center py-6 gap-4 text-white hover:text-gray-500'>
-          <FaInstagram size={28} className='cursor-pointer hover:text-white'/> 
-          <FaFacebook  size={28} className='cursor-pointer hover:text-white'/> 
-          <FaPinterest  size={28} className='cursor-pointer hover:text-white'/>
-        </div>
-        <div className='flex justify-center text-white gap-4 font-semibold'>
-          <a href="#" className=' hover:text-gray-500'>Contact & Wholesale</a>
-          <a href="#" className=' hover:text-gray-500'>Terms and conditions</a>
-          <a href="#" className=' hover:text-gray-500'>Shipping & Returns</a>
-        </div>
-      </div>
+     
     </>
   )
 }
